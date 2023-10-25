@@ -1,0 +1,106 @@
+{
+  "HOME":{
+  "Apresentação": "Présentation",
+  "Formação": "Formation",
+  "Experiência": "Expérience",
+  "Projetos": "Projets",
+  "Contato": "Contact",
+  "Profissão": "Développeur FullStack",
+  "Description": "Je suis diplômé en Gestion des Systèmes Informatiques à CFPH en Haïti et j'ai étudié l'Informatique à l'UFRJ. J'ai plus de 5 ans d'expérience dans le développement de logiciels. Au cours de ma carrière, j'ai travaillé sur des projets stimulants qui m'ont permis d'améliorer mes compétences en langages de programmation tels que Java, JavaScript et Angular. Je suis enthousiaste à l'idée de continuer à contribuer au monde de la technologie et de rechercher des opportunités passionnantes.",
+  "formation": [
+      {
+        "ano": "2011-2016",
+        "instituicao": "UNIVERSIDADE FEDERAL DO RIO DE JANEIRO",
+        "curso": "Sciences Informatiques"
+      },
+      {
+        "ano": "2004-2008",
+        "instituicao": "CENTRE DE FORMATION PROFESSIONNELLE D'HAITI",
+        "curso": "Gestion des Systèmes Informatiques"
+      }
+    ],
+    "experience": [
+      {
+        "ano": "2021-2023",
+        "cargo": "Développeur FullStack",
+        "instituicao": "UR COMPANY - BRASIL"
+      },
+      {
+        "ano": "2016-2017",
+        "cargo": "Développeur web",
+        "instituicao": "ATREVO COMUNICAÇAO E DESIGN"
+      },
+      {
+        "ano": "2011-2013",
+        "cargo": "Web design",
+        "instituicao": "MUNDVS SOFTWARE E SERVIÇOS LTDA"
+      },
+      {
+        "ano": "2014-2015",
+        "cargo": "Directeur du projet Haïti Aqui",
+        "instituicao": "VIVA RIO"
+      }
+    ],
+    "projeto": [
+      {
+        "img": "assets/img/bwint.png",
+        "imgBack": "assets/img/bwint-back.png",
+        "urlink": "http://www.bwint.com.br/",
+        "exbProjeto": "Voir le projet",
+        "nome": "Bwint"
+      },
+      {
+        "img": "assets/img/dedicare.png",
+        "imgBack": "assets/img/dedicare-back.png",
+        "urlink": "http://dedicaresaude.com.br/",
+        "exbProjeto": "Voir le projet",
+        "nome": "Dedicare"
+      },
+      {
+        "img": "assets/img/apeditora.png",
+        "imgBack": "assets/img/apeditora-back.png",
+        "urlink": "https://apeditora.com.br/",
+        "exbProjeto": "Voir le projet",
+        "nome": "Apeditora"
+      },
+      {
+        "img": "assets/img/rafhatur.png",
+        "imgBack": "assets/img/rafhatur-back.png",
+        "urlink": "https://rafhatur.com.br/",
+        "exbProjeto": "Voir le projet",
+        "nome": "Rafhatur"
+      },
+      {
+        "img": "assets/img/jerusalem.png",
+        "imgBack": "assets/img/jerusalem-back.png",
+        "urlink": "http://www.anovajerusalem.com/",
+        "exbProjeto": "Voir le projet",
+        "nome": "Anovajerusalem"
+      },
+      {
+        "img": "assets/img/autotrafo.png",
+        "imgBack": "assets/img/autotrafo-back.png",
+        "urlink": "https://autotrafo.com.br/",
+        "exbProjeto": "Voir le projet",
+        "nome": "Autotrafo"
+      }
+    ],
+    "contatoQuestion": "Souhaitez-vous me contacter ?",
+    "contatoForm": "Remplissez le formulaire, et je vous recontacterai dès que possible.",
+    "contatoRedes": "Vous pouvez également me trouver sur les réseaux sociaux suivants:",
+    "form": {
+      "CamposObrigatorios": "Les champs doivent être remplis.",
+      "ErroAoEnviarEmail": "Erreur lors de l'envoi de l'e-mail.",
+      "FormularioEnviadoComSucesso": "Formulaire envoyé avec succès.",
+      "nome": "Nom:",
+      "email": "E-mail:",
+      "assunto": "Sujet:",
+      "mensagem": "Message:",
+      "CampoNome": "Le champ nom est obligatoire.",
+      "CampoEmail": "Le champ e-mail est obligatoire.",
+      "CampoAssunto": "Le champ sujet est obligatoire.",
+      "CampoMensagem": "Le champ message est obligatoire.",
+      "enviar": "Envoyer"
+    }
+  }
+}

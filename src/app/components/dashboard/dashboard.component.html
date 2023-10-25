@@ -1,0 +1,172 @@
+<header>
+    <div class="center">
+        <div class="logo">
+            <a routerLink="" routerLinkActive="active"><img src="assets/img/lud.jpg" alt="minha foto"></a>
+        </div>
+        <nav class="desktop">
+            <ul>                    
+                <li><a href="#apresentacao">{{'HOME.Apresentação' | translate }}</a></li>
+                <li><a href="#formacao">{{'HOME.Formação' | translate }}</a></li>
+                <li><a href="#experiencia">{{'HOME.Experiência' | translate }}</a></li>
+                <li><a href="#projetos">{{'HOME.Projetos' | translate }}</a></li>
+                <li><a href="#contato">{{'HOME.Contato' | translate }}</a></li>
+                <li>
+                    <select class="osFlag" #langSelect (change)="translate.use(langSelect.value)">
+                        <option class="osFlagColor" *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <i class="fa fa-bars"></i>
+            <ul>                    
+                <li><a href="#apresentacao">{{'HOME.Apresentação' | translate }}</a></li>
+                <li><a href="#formacao">{{'HOME.Formação' | translate }}</a></li>
+                <li><a href="#experiencia">{{'HOME.Experiência' | translate }}</a></li>
+                <li><a href="#projetos">{{'HOME.Projetos' | translate }}</a></li>
+                <li><a href="#contato">{{'HOME.Contato' | translate }}</a></li>
+                <li>
+                    <select #langSelect (change)="translate.use(langSelect.value)">
+                        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                    </select>
+                </li>
+                
+            </ul>
+        </nav>           
+    </div>
+</header>
+<section class="banner"></section>
+<section id="apresentacao" class="sobre">
+    <div class="center">
+        <div class="sobre-pic-outter">
+            <div class="sobre-pic">
+                <div class="sobre-icons">
+                    <a href="https://www.linkedin.com/in/ludger-jean-louis-1a1b0a107/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+                <div class="sobre-icons">
+                    <a href="https://github.com/Ludger14" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </div>
+                <div class="sobre-icons">
+                    <a href="https://stackoverflow.com/users/22791243/ludger-jean-louis"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                </div>                    
+            </div>
+        </div>
+        <div class="sobre-description">
+            <h1>Ludger Jean Louis</h1>
+            <h2>{{'HOME.Profissão' | translate }}</h2>
+            <p>{{'HOME.Description' | translate }}</p>
+        </div>            
+    </div>        
+</section>
+<section id="formacao" class="formacao">
+    <div class="center">
+        <h3>{{'HOME.Formação' | translate }}</h3>
+        <div class="form-content" *ngFor="let item of formationData">
+            <div class="borda"></div>
+            <div class="text">
+                <p class="ano">{{ item.ano }}</p>
+                <p class="profisao">{{ item.curso }}</p>
+                <p class="nome-university">{{ item.instituicao }}</p>
+            </div>                
+        </div>
+    </div>
+</section>
+
+<section id="experiencia" class="experiencia">
+    <div class="center">
+        <h3>{{'HOME.Experiência' | translate }}</h3>
+        <div class="exp-content" *ngFor="let item of educationData">
+            <div class="borda-exp"></div>
+            <div class="text-exp">
+                <p class="ano">{{ item.ano }}</p>
+                <p class="profisao">{{ item.cargo }}</p>
+                <p class="nome-university">{{ item.instituicao }}</p>
+            </div>                
+        </div>
+    </div>
+</section>
+<section id="projetos" class="projetos">
+    <div class="center">
+        <h3>{{'HOME.Projetos' | translate }}</h3>
+        <div class="proj">
+            <div class="content" *ngFor="let item of projetoData">                
+                <div class="proj-content">
+                    <div class="flip-container" >
+                        <div class="flipper" >
+                            <div class="front">
+                                <img src="{{ item.img }}" alt="{{ item.nome }}">
+                            </div>
+                            <div class="back">
+                                <img src="{{ item.imgBack }}" alt="{{ item.nome }}">
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="button">                        
+                        <button><a target="_blank" href="{{ item.urlink }}">{{ item.exbProjeto }}</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>
+</section>  
+<section class="contato" id="contato">
+    <div class="center">
+        <h2>{{'HOME.Contato' | translate }}</h2>
+        <div class="info-form">
+            <div class="info">
+                <p>{{'HOME.contatoQuestion' | translate }}</p> 
+                <p>{{'HOME.contatoForm' | translate }}</p>
+                <p>{{'HOME.contatoRedes' | translate }}</p>
+                <div class="sociais">
+                    <div class="redes">
+                        <a href="https://www.facebook.com/ludger.jeanlouis/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="redes">
+                        <a href="https://www.instagram.com/jeanludger/"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="form">                   
+                <div *ngIf="mostrarMensagemErro && contentMessageSuccess !== null && contentMessageSuccess !== undefined" id="sucesso" class="sucesso">
+                    <div class="sucess">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div>
+                        <span>{{ contentMessageSuccess | translate }}</span>
+                    </div>                    
+                </div>
+                <div *ngIf="mostrarMensagemErro && contentMessageErro !== null && contentMessageErro !== undefined" id="erro" class="erro">
+                    <div class="err">
+                        <i class="fa fa-times"></i>
+                    </div>
+                    <div>
+                        <span>{{ contentMessageErro | translate }}</span>
+                    </div>                    
+                </div>                                     
+                <form [formGroup]="form" (ngSubmit)="submit(form)" id="contactForm">                                          
+                    <label for="nome">{{'HOME.form.nome' | translate }}</label>
+                    <input matInput formControlName="nome" [(ngModel)]="porfolio.nome" type="text" id="nome" class="form-control" />  
+                    <div *ngIf="form.controls['nome']?.dirty || form.controls['nome']?.touched">                 
+                        <mat-error class="error" *ngIf="form.get('nome').hasError('required')">{{'HOME.form.CampoNome' | translate }}</mat-error>
+                    </div> 
+                    <label for="email">{{'HOME.form.email' | translate }}</label>
+                    <input matInput formControlName="email" [(ngModel)]="porfolio.email" type="email" id="email" class="form-control" />  
+                    <div *ngIf="form.controls['email']?.dirty || form.controls['email']?.touched">                 
+                        <mat-error class="error" *ngIf="form.get('email').hasError('required')">{{'HOME.form.CampoEmail' | translate }}</mat-error>
+                    </div>
+                    <label for="assunto">{{'HOME.form.assunto' | translate }}</label>
+                    <input matInput formControlName="subject" [(ngModel)]="porfolio.assunto" type="text" id="assunto" class="form-control" />  
+                    <div *ngIf="form.controls['subject']?.dirty || form.controls['subject']?.touched">                 
+                        <mat-error class="error" *ngIf="form.get('subject').hasError('required')">{{'HOME.form.CampoAssunto' | translate }}</mat-error>
+                    </div>
+                    <label for="mensagem">{{'HOME.form.mensagem' | translate }}</label>
+                    <textarea name="mensagem" formControlName="message" [(ngModel)]="porfolio.mensagem" type="text" id="mensagem" cols="30" rows="10"></textarea>
+                    <div *ngIf="form.controls['message']?.dirty || form.controls['message']?.touched">                 
+                        <mat-error class="error" *ngIf="form.get('message').hasError('required')">{{'HOME.form.CampoMensagem' | translate }}</mat-error>
+                    </div>
+                    <input type="submit" value="{{'HOME.form.enviar' | translate }}">                      
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
