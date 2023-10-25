@@ -432,6 +432,8 @@ section.contato{
 }
 .form{
     width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 form{
     width: 100%;
