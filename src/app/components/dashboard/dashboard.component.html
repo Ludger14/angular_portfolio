@@ -26,8 +26,8 @@
                 <li><a href="#projetos">{{'HOME.projetos' | translate }}</a></li>
                 <li><a href="#contato">{{'HOME.contato' | translate }}</a></li>
                 <li>
-                    <select #langSelect (ngModelChange)="translate.use(langSelect.value)" [(ngModel)]="translate.currentLang">
-                        <option class="osFlagColor" *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
+                    <select #langSelect (change)="onLanguageChange(langSelect.value)">
+                        <option class="osFlagColor" *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
                     </select>
                 </li>
                 

@@ -106,7 +106,7 @@ export class DashboardComponent implements OnInit{
       this.form.reset();
     }
 
-    changeLanguage(lang: string) {
-      this.translate.use(lang);
+    onLanguageChange(selectedLang: string) {
+      this.translate.use(selectedLang);
     }
 }
