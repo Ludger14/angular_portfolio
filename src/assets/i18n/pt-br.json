@@ -47,63 +47,72 @@
         "imgBack": "assets/img/bwint-back.png",
         "urlink": "http://www.bwint.com.br/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Bwint"
+        "nome": "Bwint",
+        "ano": "2016"
       },
       {
         "img": "assets/img/dedicare.png",
         "imgBack": "assets/img/dedicare-back.png",
         "urlink": "http://dedicaresaude.com.br/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Dedicare"
+        "nome": "Dedicare",
+        "ano": "2017"
       },
       {
         "img": "assets/img/apeditora.png",
         "imgBack": "assets/img/apeditora-back.png",
         "urlink": "https://apeditora.com.br/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Apeditora"
+        "nome": "Apeditora",
+        "ano": "2018"
       },
       {
         "img": "assets/img/rafhatur.png",
         "imgBack": "assets/img/rafhatur-back.png",
         "urlink": "https://rafhatur.com.br/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Rafhatur"
+        "nome": "Rafhatur",
+        "ano": "2019"
       },
       {
         "img": "assets/img/jerusalem.png",
         "imgBack": "assets/img/jerusalem-back.png",
         "urlink": "http://www.anovajerusalem.com/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Anovajerusalem"
+        "nome": "Anovajerusalem",
+        "ano": "2017"
       },
       {
         "img": "assets/img/autotrafo.png",
         "imgBack": "assets/img/autotrafo-back.png",
         "urlink": "https://autotrafo.com.br/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Autotrafo"
+        "nome": "Autotrafo",
+        "ano": "2019"
       },
       {
         "img": "assets/img/flavio.png",
         "imgBack": "assets/img/flavio-back.png",
         "urlink": "http://www.flaviojacomo.com.br/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Flavio Jacomo"
+        "nome": "Flavio Jacomo",
+        "ano": "2020"
       },
       {
         "img": "assets/img/bravus.png",
         "imgBack": "assets/img/bravus-back.png",
         "urlink": "http://www.bravustour.com/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Bravus"
+        "nome": "Bravus",
+        "ano": "2020"
       },
       {
         "img": "assets/img/amcifa.png",
         "imgBack": "assets/img/amcifa-back.png",
         "urlink": "http://amcifa.com.br/contato/",
         "exbProjeto": "Exibir projeto",
-        "nome": "Amcifa"
+        "nome": "Amcifa",
+        "ano": "2016"
       }
     ],
     "contatoQuestion": "Quer entrar em contato comigo?",

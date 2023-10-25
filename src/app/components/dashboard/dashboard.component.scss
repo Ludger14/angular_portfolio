@@ -22,7 +22,32 @@
     cursor: pointer;
 }
 
-.hidden-flag {
-    display: none;
-}
+/* Estilo para o tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    font-size: 12px;
+    z-index: 1;
+    bottom: 27%;
+    left: 80%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
 

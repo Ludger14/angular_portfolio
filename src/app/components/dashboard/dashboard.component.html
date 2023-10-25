@@ -105,7 +105,7 @@
         <h3>{{'HOME.projetos' | translate }}</h3>
         <div class="proj">
             <div class="content" *ngFor="let item of projetoData">                
-                <div class="proj-content">
+                <div class="proj-content tooltip">
                     <div class="flip-container" >
                         <div class="flipper" >
                             <div class="front">
@@ -119,6 +119,7 @@
                     <div class="button">                        
                         <button><a target="_blank" href="{{ item.urlink }}">{{ item.exbProjeto }}</a></button>
                     </div>
+                    <span class="tooltiptext">{{ item.nome }} - {{ item.ano }}</span>
                 </div>
             </div>
         </div>            
