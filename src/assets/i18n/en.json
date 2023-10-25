@@ -83,6 +83,27 @@
         "urlink": "https://autotrafo.com.br/",
         "exbProjeto": "View project",
         "nome": "Autotrafo"
+      },
+      {
+        "img": "assets/img/flavio.png",
+        "imgBack": "assets/img/flavio-back.png",
+        "urlink": "http://www.flaviojacomo.com.br/",
+        "exbProjeto": "View project",
+        "nome": "Flavio Jacomo"
+      },
+      {
+        "img": "assets/img/bravus.png",
+        "imgBack": "assets/img/bravus-back.png",
+        "urlink": "http://www.bravustour.com/",
+        "exbProjeto": "View project",
+        "nome": "Bravus"
+      },
+      {
+        "img": "assets/img/amcifa.png",
+        "imgBack": "assets/img/amcifa-back.png",
+        "urlink": "http://amcifa.com.br/contato/",
+        "exbProjeto": "View project",
+        "nome": "Amcifa"
       }
     ],
     "contatoQuestion": "Would you like to get in touch with me?",
