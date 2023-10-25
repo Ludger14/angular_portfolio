@@ -1,12 +1,12 @@
 {
     "HOME": {
-    "Apresentação": "Apresentação",
-    "Formação": "Formação",
-    "Experiência": "Experiência",
-    "Projetos": "Projetos",
-    "Contato": "Contato",
-    "Profissão": "Desenvolvedor FullStack",
-    "Description": "Sou graduado em Análise de Sistemas no Haiti e cursei Ciência da Computação na UFRJ. Possuo mais de 5 anos de experiência no desenvolvimento de software. Ao longo da minha carreira, fui desafiado por projetos estimulantes que me permitiram aprimorar minhas habilidades em linguagens de programação como Java, JavaScript e Angular. Estou cheio de entusiasmo para continuar contribuindo para o mundo da tecnologia e à procura de oportunidades empolgantes.",
+    "apresentacao": "Apresentação",
+    "formacao": "Formação",
+    "experiencia": "Experiência",
+    "projetos": "Projetos",
+    "contato": "Contato",
+    "profissao": "Desenvolvedor FullStack",
+    "description": "Sou graduado em Análise de Sistemas no Haiti e cursei Ciência da Computação na UFRJ. Possuo mais de 5 anos de experiência no desenvolvimento de software. Ao longo da minha carreira, fui desafiado por projetos estimulantes que me permitiram aprimorar minhas habilidades em linguagens de programação como Java, JavaScript e Angular. Estou cheio de entusiasmo para continuar contribuindo para o mundo da tecnologia e à procura de oportunidades empolgantes.",
     "formation": [
       {
         "ano": "2011-2016",

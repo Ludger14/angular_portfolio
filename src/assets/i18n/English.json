@@ -1,12 +1,12 @@
 {
   "HOME": {
-  "Apresentação": "Presentation",
-  "Formação": "Education",
-  "Experiência": "Experience",
-  "Projetos": "Projects",
-  "Contato": "Contact Me",
-  "Profissão": "FullStack Developer",
-  "Description": "I hold a degree in Systems Analysis from Haiti and pursued Computer Science at UFRJ. With over 5 years of experience in software development, my career has been a journey of embracing exciting challenges that honed my skills in programming languages such as Java, JavaScript, and Angular. I am brimming with enthusiasm to keep contributing to the world of technology and actively seeking thrilling opportunities.",
+  "apresentacao": "Presentation",
+  "formacao": "Education",
+  "experiencia": "Experience",
+  "projetos": "Projects",
+  "contato": "Contact Me",
+  "profissao": "FullStack Developer",
+  "description": "I hold a degree in Systems Analysis from Haiti and pursued Computer Science at UFRJ. With over 5 years of experience in software development, my career has been a journey of embracing exciting challenges that honed my skills in programming languages such as Java, JavaScript, and Angular. I am brimming with enthusiasm to keep contributing to the world of technology and actively seeking thrilling opportunities.",
   "formation": [
       {
         "ano": "2011-2016",
