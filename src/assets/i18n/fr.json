@@ -101,6 +101,11 @@
       "CampoAssunto": "Le champ sujet est obligatoire.",
       "CampoMensagem": "Le champ message est obligatoire.",
       "enviar": "Envoyer"
+    },
+    "erro": {
+      "nome": "Le nom est trop long.",
+      "email": "L'e-mail est trop long.",
+      "assunto": "Le sujet est trop long."
     }
   }
 }

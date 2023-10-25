@@ -101,6 +101,11 @@
       "CampoAssunto": "The subject field is required.",
       "CampoMensagem": "The message field is required.",
       "enviar": "Send"
+    },
+    "erro": {
+      "nome": "Name is too long.",
+      "email": "Email is too long.",
+      "assunto": "Subject is too long."
     }
   }
 }

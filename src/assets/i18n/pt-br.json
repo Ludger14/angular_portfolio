@@ -101,6 +101,11 @@
       "CampoAssunto": "O campo assunto é obrigatório.",
       "CampoMensagem": "O campo mensagem é obrigatório.",
       "enviar": "Enviar"
+    },
+    "erro": {
+      "nome": "Nome muito longo.",
+      "email": "Email muito longo.",
+      "assunto": "Assunto muito longo."
     }
   }
 }

@@ -32,55 +32,39 @@ export class DashboardComponent implements OnInit{
     educationData: any;
     projetoData: any;
     
-    constructor(private fb: FormBuilder, private route : Router, private router: ActivatedRoute, private httpClient: HttpClient,
-      private renderizar: Renderer2, private alertModalService: AlertModalService, public translate: TranslateService, 
+    constructor(private fb: FormBuilder, public translate: TranslateService, 
       private dashboardService: DashboardService,){
         translate.addLangs(['en', 'fr', 'pt-br']);
         translate.setDefaultLang('pt-br');
-
-        // const browserLang = translate.getBrowserLang();
-        // translate.use(browserLang.match(/en|fr|pt-br/) ? browserLang : 'pt-br');
     }
     
 
     ngOnInit() { 
         this.form = this.fb.group({
             nome: ['', [Validators.required, Validators.maxLength(255)]],
-            email: ['', [Validators.required]],
-            subject: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.maxLength(255)]],
+            subject: ['', [Validators.required, Validators.maxLength(255)]],
             message: ['', [Validators.required]],
         });
 
-        this.translate.onLangChange.subscribe(() => {
-          this.translate.get('HOME.formation').subscribe(data => {
-            this.formationData = data;
-          });
+        this.translate.get('HOME.formation').subscribe(data => {
+          this.formationData = data;
         });
 
-        this.translate.onLangChange.subscribe(() => {
-          this.translate.get('HOME.experience').subscribe(data => {
-            this.educationData = data;
-          });
+        this.translate.get('HOME.experience').subscribe(data => {
+          this.educationData = data;
         });
 
-        this.translate.onLangChange.subscribe(() => {
-          this.translate.get('HOME.projeto').subscribe(data => {
-            this.projetoData = data;
-          });
+        this.translate.get('HOME.projeto').subscribe(data => {
+          this.projetoData = data;
         });
-    }
-
-    ngOnDestroy(): void {
     } 
     
     submit(form: any) {
       if (form.invalid) {
         this.mostrarMensagemErro = true;
         this.contentMessageErro = 'HOME.form.CamposObrigatorios';
-        setTimeout(() => {
-          this.mostrarMensagemErro = false;
-          this.contentMessageErro = null;
-        }, 10000);
+        this.clearMessagesAfterTimeout();
       } else {
         this.dashboardService.saveMessage(this.porfolio).subscribe((response: any) => {
           if (response.body.success) {
@@ -89,25 +73,41 @@ export class DashboardComponent implements OnInit{
           } else {
             this.mostrarMensagemErro = true;
             this.contentMessageErro = 'HOME.form.ErroAoEnviarEmail';
-          }
-    
-          setTimeout(() => {
-            this.mostrarMensagemErro = false;
-            this.contentMessageErro = null;
-            this.contentMessageSuccess = null;
-          }, 10000);
-          this.limparCampos();
+          }    
+          this.clearMessagesAfterTimeout();
+          this.clearForm();
         });
       }      
-    }
-    
+    }    
 
-    limparCampos(){
+    clearMessagesAfterTimeout() {
+      setTimeout(() => {
+        this.mostrarMensagemErro = false;
+        this.contentMessageErro = null;
+        this.contentMessageSuccess = null;
+      }, 10000);
+    }
+  
+    clearForm() {
       this.form.reset();
     }
 
     onLanguageChange(selectedLang: string) {
-      console.log('Novo idioma selecionado:', selectedLang);
       this.translate.use(selectedLang);
+      this.updateTranslatedData();
+    }
+
+    updateTranslatedData() {
+      this.translate.get('HOME.formation').subscribe(data => {
+        this.formationData = data;
+      });
+  
+      this.translate.get('HOME.experience').subscribe(data => {
+        this.educationData = data;
+      });
+  
+      this.translate.get('HOME.projeto').subscribe(data => {
+        this.projetoData = data;
+      });
     }
 }
