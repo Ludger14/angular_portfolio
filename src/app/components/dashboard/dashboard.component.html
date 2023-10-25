@@ -11,9 +11,17 @@
                 <li><a href="#projetos">{{'HOME.projetos' | translate }}</a></li>
                 <li><a href="#contato">{{'HOME.contato' | translate }}</a></li>
                 <li>
-                    <select class="osFlag" #langSelect (ngModelChange)="translate.use(langSelect.value)" [(ngModel)]="translate.currentLang">
-                        <option class="osFlagColor" *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
-                    </select>
+                    <div class="flags">
+                        <div (click)="onLanguageChange('en')" *ngIf="translate.currentLang !== 'en'">
+                            <img src="assets/img/usa.png" alt="Flag">
+                        </div>
+                        <div (click)="onLanguageChange('fr')" *ngIf="translate.currentLang !== 'fr'">
+                            <img src="assets/img/france.png" alt="Flag">
+                        </div>
+                        <div (click)="onLanguageChange('pt-br')" *ngIf="translate.currentLang === 'fr' || translate.currentLang === 'en'">
+                            <img src="assets/img/brazil.png" alt="Flag">
+                        </div>
+                    </div> 
                 </li>
             </ul>
         </nav>
@@ -26,11 +34,18 @@
                 <li><a href="#projetos">{{'HOME.projetos' | translate }}</a></li>
                 <li><a href="#contato">{{'HOME.contato' | translate }}</a></li>
                 <li>
-                    <select #langSelect (change)="onLanguageChange(langSelect.value)">
-                        <option class="osFlagColor" *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-                    </select>
-                </li>
-                
+                    <div class="flags">
+                        <div (click)="onLanguageChange('en')" *ngIf="translate.currentLang !== 'en'">
+                            <img src="assets/img/usa.png" alt="Flag">
+                        </div>
+                        <div (click)="onLanguageChange('fr')" *ngIf="translate.currentLang !== 'fr'">
+                            <img src="assets/img/france.png" alt="Flag">
+                        </div>
+                        <div (click)="onLanguageChange('pt-br')" *ngIf="translate.currentLang === 'fr' || translate.currentLang === 'en'">
+                            <img src="assets/img/brazil.png" alt="Flag">
+                        </div>
+                    </div>                   
+                </li>                
             </ul>
         </nav>           
     </div>

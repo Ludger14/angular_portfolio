@@ -35,11 +35,11 @@ export class DashboardComponent implements OnInit{
     constructor(private fb: FormBuilder, private route : Router, private router: ActivatedRoute, private httpClient: HttpClient,
       private renderizar: Renderer2, private alertModalService: AlertModalService, public translate: TranslateService, 
       private dashboardService: DashboardService,){
-        translate.addLangs(['English', 'Français', 'Português']);
-        translate.setDefaultLang('Português');
+        translate.addLangs(['en', 'fr', 'pt-br']);
+        translate.setDefaultLang('pt-br');
 
-        const browserLang = translate.getBrowserLang();
-        translate.use(browserLang.match(/English|Français/) ? browserLang : 'Português');
+        // const browserLang = translate.getBrowserLang();
+        // translate.use(browserLang.match(/en|fr|pt-br/) ? browserLang : 'pt-br');
     }
     
 
@@ -107,6 +107,7 @@ export class DashboardComponent implements OnInit{
     }
 
     onLanguageChange(selectedLang: string) {
+      console.log('Novo idioma selecionado:', selectedLang);
       this.translate.use(selectedLang);
     }
 }
