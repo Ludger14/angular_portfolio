@@ -11,7 +11,7 @@
                 <li><a href="#projetos">{{'HOME.projetos' | translate }}</a></li>
                 <li><a href="#contato">{{'HOME.contato' | translate }}</a></li>
                 <li>
-                    <div class="flags">
+                    <!-- <div class="flags">
                         <div (click)="onLanguageChange('en')" *ngIf="translate.currentLang !== 'en'">
                             <img src="assets/img/usa.png" alt="Flag">
                         </div>
@@ -21,7 +21,16 @@
                         <div (click)="onLanguageChange('pt-br')" *ngIf="translate.currentLang === 'fr' || translate.currentLang === 'en'">
                             <img src="assets/img/brazil.png" alt="Flag">
                         </div>
-                    </div> 
+                    </div>  -->
+                    
+                    <form [formGroup]="formSelect" id="contactForm" class="formSelect">   
+                        <select (change)="onLanguage()" formControlName="idioma" class="idiomas">
+                            <option class="idiomaOption" value="en">{{'HOME.idioma.en' | translate }}</option>
+                            <option class="idiomaOption" value="fr">{{'HOME.idioma.fr' | translate }}</option>
+                            <option class="idiomaOption" value="pt-br">{{'HOME.idioma.pt-br' | translate }}</option>
+                        </select> 
+                    </form>
+                    
                 </li>
             </ul>
         </nav>
@@ -34,7 +43,7 @@
                 <li><a href="#projetos">{{'HOME.projetos' | translate }}</a></li>
                 <li><a href="#contato">{{'HOME.contato' | translate }}</a></li>
                 <li>
-                    <div class="flags">
+                    <!-- <div class="flags">
                         <div (click)="onLanguageChange('en')" *ngIf="translate.currentLang !== 'en'">
                             <img src="assets/img/usa.png" alt="Flag">
                         </div>
@@ -44,7 +53,14 @@
                         <div (click)="onLanguageChange('pt-br')" *ngIf="translate.currentLang === 'fr' || translate.currentLang === 'en'">
                             <img src="assets/img/brazil.png" alt="Flag">
                         </div>
-                    </div>                   
+                    </div> -->
+                    <form [formGroup]="formSelect" id="contactForm" class="formSelect">   
+                        <select (change)="onLanguage()" formControlName="idioma" class="idiomas">
+                            <option class="idiomaOption" value="en">{{'HOME.idioma.en' | translate }}</option>
+                            <option class="idiomaOption" value="fr">{{'HOME.idioma.fr' | translate }}</option>
+                            <option class="idiomaOption" value="pt-br">{{'HOME.idioma.pt-br' | translate }}</option>
+                        </select>  
+                    </form>
                 </li>                
             </ul>
         </nav>           

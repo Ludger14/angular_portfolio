@@ -136,6 +136,11 @@
       "nome": "Nome muito longo.",
       "email": "Email muito longo.",
       "assunto": "Assunto muito longo."
+    },
+    "idioma": {
+      "pt-br": "Português",
+      "en": "Inglês",
+      "fr": "Francês"
     }
   }
 }

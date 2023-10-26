@@ -20,6 +20,7 @@ import { DashboardService } from 'src/app/services/dashboard.service';
 export class DashboardComponent implements OnInit{
 
     form!: FormGroup;
+    formSelect!: FormGroup;
 
     porfolio: Portfolio = new Portfolio();
 
@@ -45,6 +46,10 @@ export class DashboardComponent implements OnInit{
             email: ['', [Validators.required, Validators.maxLength(255)]],
             subject: ['', [Validators.required, Validators.maxLength(255)]],
             message: ['', [Validators.required]],
+        });
+
+        this.formSelect = this.fb.group({
+          idioma: ['pt-br'],
         });
 
         this.translate.get('HOME.formation').subscribe(data => {
@@ -110,4 +115,11 @@ export class DashboardComponent implements OnInit{
         this.projetoData = data;
       });
     }
+
+    onLanguage(){
+      let idioma = this.formSelect.controls['idioma'].value;    
+      this.translate.use(idioma);
+      this.updateTranslatedData();
+    }
+    
 }

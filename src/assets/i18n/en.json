@@ -136,6 +136,11 @@
       "nome": "Name is too long.",
       "email": "Email is too long.",
       "assunto": "Subject is too long."
+    },
+    "idioma": {
+      "pt-br": "Portuguese",
+      "en": "English",
+      "fr": "French"
     }
   }
 }

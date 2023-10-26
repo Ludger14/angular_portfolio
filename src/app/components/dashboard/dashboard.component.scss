@@ -51,3 +51,24 @@
     opacity: 1;
   }
 
+  .formSelect{
+    display: inline !important;
+  }
+
+  .idiomas{
+    outline: 0;
+    background-color: transparent;
+    border: 0;
+    color: white;
+  }
+  .idiomaOption{
+    color: black;
+  }
+
+  @media screen and (max-width: 768px){
+    .idiomas{
+      color: black;
+    }
+  }
+
+
