@@ -31,7 +31,7 @@ html,body{
 .err{
 	display: inline-block;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 12px;
     width: 20px;
     height: 20px;
     border-radius: 50%;	
@@ -42,14 +42,14 @@ html,body{
 }
 .err i{
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .sucess{
 	display: inline-block;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 12px;
     width: 20px;
     height: 20px;
     border-radius: 50%;	
@@ -60,7 +60,7 @@ html,body{
 }
 .sucess i{
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
