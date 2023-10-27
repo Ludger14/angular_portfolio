@@ -26,6 +26,7 @@ export class DashboardComponent implements OnInit{
 
     mostrarMensagemErro: boolean = false;
     disableBox: boolean = false;
+    showProgressBar: boolean = false;
 
     contentMessageErro: string;
     contentMessageSuccess: string;
@@ -74,6 +75,7 @@ export class DashboardComponent implements OnInit{
         this.disableBox = false;
         this.clearMessagesAfterTimeout();
       } else {
+        this.showProgressBar = true;
         this.dashboardService.saveMessage(this.porfolio).subscribe((response: any) => {
           if (response.body.success) {
             this.mostrarMensagemErro = true;
@@ -83,7 +85,8 @@ export class DashboardComponent implements OnInit{
             this.mostrarMensagemErro = true;
             this.contentMessageErro = 'HOME.form.ErroAoEnviarEmail';
           }
-          this.disableBox = false;    
+          this.disableBox = false; 
+          this.showProgressBar = false;   
           this.clearMessagesAfterTimeout();
         });
       }      
@@ -124,6 +127,12 @@ export class DashboardComponent implements OnInit{
       let idioma = this.formSelect.controls['idioma'].value;    
       this.translate.use(idioma);
       this.updateTranslatedData();
+    }
+
+    fechar(){
+      this.mostrarMensagemErro = false;
+      this.contentMessageErro = null;
+      this.contentMessageSuccess = null;
     }
     
 }

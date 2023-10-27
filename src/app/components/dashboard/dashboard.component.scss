@@ -67,6 +67,20 @@
     color: black;
   }
 
+  .progressBar .mat-progress-bar {
+    border-radius: 5px;
+    height: 30px;
+  }
+
+  .iconeMessage{
+    display: flex;
+    justify-content: start;
+  }
+
+  .closeJanela{
+    cursor: pointer;
+  }
+
   @media screen and (max-width: 768px){
     .idiomas{
       color: black;

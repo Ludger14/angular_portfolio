@@ -158,22 +158,33 @@
                     </div>
                 </div>
             </div>
-            <div class="form">                   
+            <div class="form progressBar">  
+                <mat-progress-bar *ngIf="showProgressBar" mode="indeterminate"></mat-progress-bar>                 
                 <div *ngIf="mostrarMensagemErro && contentMessageSuccess !== null && contentMessageSuccess !== undefined" id="sucesso" class="sucesso">
-                    <div class="sucess">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <div>
-                        <span>{{ contentMessageSuccess | translate }}</span>
-                    </div>                    
+                    <div class="iconeMessage">
+                        <div class="sucess">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div>
+                            <span>{{ contentMessageSuccess | translate }}</span>
+                        </div>
+                    </div>                     
+                    <div class="closeJanela" (click)="fechar()">
+                        <i class="fa fa-times"></i>
+                    </div>                   
                 </div>
                 <div *ngIf="mostrarMensagemErro && contentMessageErro !== null && contentMessageErro !== undefined" id="erro" class="erro">
-                    <div class="err">
+                    <div class="iconeMessage">
+                        <div class="err">
+                            <i class="fa fa-times"></i>
+                        </div>
+                        <div>
+                            <span>{{ contentMessageErro | translate }}</span>
+                        </div>
+                    </div>                     
+                    <div class="closeJanela" (click)="fechar()">
                         <i class="fa fa-times"></i>
-                    </div>
-                    <div>
-                        <span>{{ contentMessageErro | translate }}</span>
-                    </div>                    
+                    </div>                   
                 </div>                                     
                 <form [formGroup]="form" (ngSubmit)="submit(form)" id="contactForm">                                          
                     <label for="nome">{{'HOME.form.nome' | translate }}</label>
