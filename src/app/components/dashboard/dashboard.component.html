@@ -196,7 +196,7 @@
                     <div *ngIf="form.controls['message']?.dirty || form.controls['message']?.touched">                 
                         <mat-error class="error" *ngIf="form.get('message').hasError('required')">{{'HOME.form.CampoMensagem' | translate }}</mat-error>
                     </div>
-                    <input type="submit" value="{{'HOME.form.enviar' | translate }}">                      
+                    <input type="submit" value="{{'HOME.form.enviar' | translate }}" [disabled]="disableBox">                      
                 </form>
             </div>
         </div>

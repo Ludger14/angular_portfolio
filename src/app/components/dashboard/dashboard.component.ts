@@ -25,13 +25,14 @@ export class DashboardComponent implements OnInit{
     porfolio: Portfolio = new Portfolio();
 
     mostrarMensagemErro: boolean = false;
+    disableBox: boolean = false;
 
     contentMessageErro: string;
     contentMessageSuccess: string;
 
     formationData: any;
     educationData: any;
-    projetoData: any;
+    projetoData: any;    
     
     constructor(private fb: FormBuilder, public translate: TranslateService, 
       private dashboardService: DashboardService,){
@@ -66,21 +67,24 @@ export class DashboardComponent implements OnInit{
     } 
     
     submit(form: any) {
+      this.disableBox = true;
       if (form.invalid) {
         this.mostrarMensagemErro = true;
         this.contentMessageErro = 'HOME.form.CamposObrigatorios';
+        this.disableBox = false;
         this.clearMessagesAfterTimeout();
       } else {
         this.dashboardService.saveMessage(this.porfolio).subscribe((response: any) => {
           if (response.body.success) {
             this.mostrarMensagemErro = true;
             this.contentMessageSuccess = 'HOME.form.FormularioEnviadoComSucesso';
+            this.clearForm();
           } else {
             this.mostrarMensagemErro = true;
             this.contentMessageErro = 'HOME.form.ErroAoEnviarEmail';
-          }    
+          }
+          this.disableBox = false;    
           this.clearMessagesAfterTimeout();
-          this.clearForm();
         });
       }      
     }    
