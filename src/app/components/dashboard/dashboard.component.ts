@@ -1,5 +1,5 @@
 
-import { Component, OnInit, Renderer2} from '@angular/core';
+import { Component, HostListener, OnInit, Renderer2} from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DomSanitizer } from "@angular/platform-browser";
 import { AlertModalService } from 'src/app/services/alert-modal.service';
@@ -41,6 +41,17 @@ export class DashboardComponent implements OnInit{
         translate.setDefaultLang('pt-br');
     }
     
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+      const button = document.getElementById('scrollToTopButton');
+      if (button) {
+        if (window.pageYOffset > 300) { // Ajuste esse valor para determinar quando mostrar o botão
+          button.classList.add('show');
+        } else {
+          button.classList.remove('show');
+        }
+      }
+    }
 
     ngOnInit() { 
         this.form = this.fb.group({
@@ -134,5 +145,10 @@ export class DashboardComponent implements OnInit{
       this.contentMessageErro = null;
       this.contentMessageSuccess = null;
     }
+
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
     
 }

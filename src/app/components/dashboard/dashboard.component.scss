@@ -81,6 +81,51 @@
     cursor: pointer;
   }
 
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Inicialmente, o botão está oculto */
+  }
+  
+  #scrollToTopButton.show {
+    display: block; /* Quando a classe 'show' é adicionada, o botão fica visível */
+  }
+
+  .whatsapp-button {
+    position: fixed; /* Para torná-lo flutuante */
+    bottom: 70px; /* Distância da parte inferior da janela */
+    right: 20px; /* Distância da direita da janela */
+    background-color: #25d366; /* Cor de fundo do WhatsApp */
+    color: #fff; /* Cor do ícone */
+    border-radius: 50%; /* Para um visual de círculo */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Efeito de transição de cor */
+  }
+  
+  .whatsapp-button i {
+    font-size: 24px; /* Tamanho do ícone */
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128c7e; /* Cor de fundo alterada no hover */
+  }
+  
+  
+
   @media screen and (max-width: 768px){
     .idiomas{
       color: black;
