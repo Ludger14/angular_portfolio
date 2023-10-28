@@ -115,8 +115,8 @@
         "ano": "2016"
       }
     ],
-    "contatoQuestion": "Souhaitez-vous me contacter ?",
-    "contatoForm": "Remplissez le formulaire, et je vous recontacterai dès que possible.",
+    "contatoQuestion": "Souhaitez-vous entrer en contact avec moi?",
+    "contatoForm": "Il vous suffit de remplir le formulaire, et je serai à votre service le plus rapidement possible.",
     "contatoRedes": "Vous pouvez également me trouver sur les réseaux sociaux suivants:",
     "form": {
       "CamposObrigatorios": "Les champs doivent être remplis.",

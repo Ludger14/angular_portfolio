@@ -115,9 +115,9 @@
         "ano": "2016"
       }
     ],
-    "contatoQuestion": "Quer entrar em contato comigo?",
-    "contatoForm": "Preencha o formulário e entrarei em contato o mais rápido possível.",
-    "contatoRedes": "Você também pode me encontrar nas seguintes redes sociais:",
+    "contatoQuestion": "Deseja estabelecer contato comigo?",
+    "contatoForm": "Basta preencher o formulário e estarei à sua disposição o mais rapidamente possível.",
+    "contatoRedes": "Além disso, você pode me encontrar nas seguintes redes sociais:",
     "form": {
       "CamposObrigatorios": "Os campos devem ser preenchidos.",
       "ErroAoEnviarEmail": "Erro ao enviar o email.",
