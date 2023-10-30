@@ -237,21 +237,24 @@
         ]
       },
       {
-        "icone": "fa-sitemap",
-        "title": "Extra",
+        "icone": "fa-language",
+        "title": "Languages",
         "isActive": false, 
         "descricao": [
           {
-            "text": "Git"
+            "text": "Portuguese"
           },
           {
-            "text": "Github"
+            "text": "English"
           },
           {
-            "text": "Photoshop"
+            "text": "French"
+          },
+          {
+            "text": "Haitian Creole"
           }
         ]
-      },
+      },      
       {
         "icone": "fa-book",
         "title": "Course in progress",
@@ -265,6 +268,43 @@
           },
           {
             "text": "Python"
+          }
+        ]
+      },
+      {
+        "icone": "fa-sitemap",
+        "title": "Extra",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "Git"
+          },
+          {
+            "text": "Github"
+          },
+          {
+            "text": "Photoshop"
+          },
+          {
+            "text": "Adaptability"
+          },
+          {
+            "text": "Teamwork"
+          },
+          {
+            "text": "Communication"
+          },
+          {
+            "text": "Proactivity"
+          },
+          {
+            "text": "Creativity"
+          },
+          {
+            "text": "Ease of learning"
+          },
+          {
+            "text": "Organization"
           }
         ]
       }

@@ -237,21 +237,24 @@
         ]
       },
       {
-        "icone": "fa-sitemap",
-        "title": "Supplémentaire",
+        "icone": "fa-language",
+        "title": "Langues",
         "isActive": false, 
         "descricao": [
           {
-            "text": "Git"
+            "text": "Portugais"
           },
           {
-            "text": "Github"
+            "text": "Anglais"
           },
           {
-            "text": "Photoshop"
+            "text": "Français"
+          },
+          {
+            "text": "Créole haïtien"
           }
         ]
-      },
+      },      
       {
         "icone": "fa-book",
         "title": "Cours en cours",
@@ -265,6 +268,43 @@
           },
           {
             "text": "Python"
+          }
+        ]
+      },
+      {
+        "icone": "fa-sitemap",
+        "title": "Supplémentaire",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "Git"
+          },
+          {
+            "text": "Github"
+          },
+          {
+            "text": "Photoshop"
+          },
+          {
+            "text": "Adaptabilité"
+          },
+          {
+            "text": "Travail d'équipe"
+          },
+          {
+            "text": "Communication"
+          },
+          {
+            "text": "Proactivité"
+          },
+          {
+            "text": "Créativité"
+          },
+          {
+            "text": "Facilité d'apprentissage"
+          },
+          {
+            "text": "Organisation"
           }
         ]
       }

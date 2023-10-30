@@ -129,7 +129,7 @@
                 </div>
                 <div class="itemAlign" *ngIf="item.isActive">
                     <ul>
-                        <li *ngFor="let descricaoItem of item.descricao; let i = index">{{i + 1}}. {{ descricaoItem.text }}</li>
+                        <li *ngFor="let descricaoItem of item.descricao; let i = index"><span class="bolinha"></span> {{ descricaoItem.text }}</li>
                     </ul>
                 </div>
             </div>     
