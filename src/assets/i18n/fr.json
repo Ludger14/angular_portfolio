@@ -21,6 +21,11 @@
     ],
     "experience": [
       {
+        "ano": "2021 à aujourd'hui",
+        "cargo": "Développeur FullStack",
+        "instituicao": "Toti"
+      },
+      {
         "ano": "2021-2023",
         "cargo": "Développeur FullStack",
         "instituicao": "UR COMPANY - BRASIL"
@@ -141,6 +146,128 @@
       "pt-br": "Portugais",
       "en": "Anglais",
       "fr": "Français"
-    }
+    },
+    "talento": "Compétences",
+    "skills": [
+      {
+        "icone": "fa-code",
+        "title": "Développement Web",
+        "isActive": true, 
+        "descricao": [
+          {
+            "text": "Html"
+          },
+          {
+            "text": "Css"
+          },
+          {
+            "text": "Javascript"
+          }
+        ]
+      },
+      {
+        "icone": "fa-gears",
+        "title": "Framework",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "Bootstrap"
+          },
+          {
+            "text": "Angular.js"
+          },
+          {
+            "text": "Vue.js"
+          }
+        ]
+      },
+      {
+        "icone": "fa-file",
+        "title": "Bibliothèque",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "JQuery"
+          },
+          {
+            "text": "React.js"
+          }
+        ]
+      },
+      {
+        "icone": "fa-cubes",
+        "title": "Backend",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "Java"
+          },
+          {
+            "text": "Node.js"
+          },
+          {
+            "text": "PHP"
+          }
+        ]
+      },
+      {
+        "icone": "fa-database",
+        "title": "Base de données",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "PostgreSQL"
+          },
+          {
+            "text": "MySQL"
+          },
+          {
+            "text": "SQLite"
+          }
+        ]
+      },
+      {
+        "icone": "fa-folder-open",
+        "title": "Gestion de Projet",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "Kanban"
+          }
+        ]
+      },
+      {
+        "icone": "fa-sitemap",
+        "title": "Supplémentaire",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "Git"
+          },
+          {
+            "text": "Github"
+          },
+          {
+            "text": "Photoshop"
+          }
+        ]
+      },
+      {
+        "icone": "fa-book",
+        "title": "Cours en cours",
+        "isActive": false, 
+        "descricao": [
+          {
+            "text": "Flutter"
+          },
+          {
+            "text": "React"
+          },
+          {
+            "text": "Python"
+          }
+        ]
+      }
+    ]
   }
 }

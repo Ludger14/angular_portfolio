@@ -328,7 +328,8 @@ section.sobre{
 .projetos{
     width: 100%;
     padding: 30px 0;
-    background-color: #f2f2f2;
+    //background-color: #f2f2f2;
+    background-color: #dedede;
 }
 .projetos h3{     
     font-size: 25px;
@@ -385,6 +386,20 @@ section.sobre{
     text-decoration: none;
     color: white;
 }
+// Skills
+section.skill{
+    width: 100%;
+    padding: 30px 0;
+    //background-color: #f2f2f2;
+}
+.skill h3{     
+    font-size: 25px;
+    color: #707070;
+    opacity: 1;     
+    font-weight: lighter; 
+    padding: 10px 0;  
+}
+
 section.contato{
     padding: 30px 0;
     background-color: black;

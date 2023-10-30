@@ -33,7 +33,10 @@ export class DashboardComponent implements OnInit{
 
     formationData: any;
     educationData: any;
-    projetoData: any;    
+    projetoData: any; 
+    skillsData: any; 
+    
+    isActive: boolean = false;
     
     constructor(private fb: FormBuilder, public translate: TranslateService, 
       private dashboardService: DashboardService,){
@@ -75,6 +78,10 @@ export class DashboardComponent implements OnInit{
 
         this.translate.get('HOME.projeto').subscribe(data => {
           this.projetoData = data;
+        });
+
+        this.translate.get('HOME.skills').subscribe(data => {
+          this.skillsData = data;
         });
     } 
     
@@ -132,6 +139,10 @@ export class DashboardComponent implements OnInit{
       this.translate.get('HOME.projeto').subscribe(data => {
         this.projetoData = data;
       });
+
+      this.translate.get('HOME.skills').subscribe(data => {
+        this.skillsData = data;
+      });
     }
 
     onLanguage(){
@@ -150,5 +161,9 @@ export class DashboardComponent implements OnInit{
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     
+    toggleActive(item) {
+      this.skillsData.forEach(skill => skill.isActive = false);
+      item.isActive = !item.isActive;
+    }
     
 }

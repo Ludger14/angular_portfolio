@@ -124,7 +124,52 @@
     background-color: #128c7e; /* Cor de fundo alterada no hover */
   }
   
-  
+  .vertical-text {
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    transform: rotate(180deg);
+    transform-origin: left bottom;
+    color: white;
+    position: absolute;
+    z-index: 999999999999;
+    bottom: 60%;
+    left: 62%;
+  }
+
+  .skill i, h4{     
+    font-size: 18px;
+    color: #707070;
+    opacity: 1;     
+    font-weight: lighter; 
+    padding: 10px 0;  
+  }
+  .skill i{  
+    margin: 4px 8px 0 0;  
+  }
+
+  .spaceIcon{  
+    margin-left: 15px !important; 
+  }
+
+  .skillsContent{
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+  .skillsItem{
+    flex: 1 1 150px;
+  }
+  .itemAlign{
+    display: flex;
+  }
+  .itemAlign ul{
+    display: flex;
+    list-style: none;
+    margin: 10px 0;
+  }
+  .itemAlign ul li{
+    padding: 0 15px;
+  }
 
   @media screen and (max-width: 768px){
     .idiomas{

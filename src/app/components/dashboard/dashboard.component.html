@@ -116,6 +116,27 @@
         </div>
     </div>
 </section>
+
+<section id="skill" class="skill">
+    <div class="center">
+        <h3>{{'HOME.talento' | translate }}</h3>  
+        <div class="skillsContent" *ngFor="let item of skillsData" [class.active]="item.isActive" (click)="toggleActive(item)">
+            <div class="skillsItem">
+                <div class="itemAlign">
+                    <i class="fa {{item.icone}}"></i>
+                    <h4 class="title">{{ item.title }}</h4>
+                    <i class="fa fa-angle-double-right spaceIcon" aria-hidden="true" *ngIf="item.isActive"></i>
+                </div>
+                <div class="itemAlign" *ngIf="item.isActive">
+                    <ul>
+                        <li *ngFor="let descricaoItem of item.descricao; let i = index">{{i + 1}}. {{ descricaoItem.text }}</li>
+                    </ul>
+                </div>
+            </div>     
+        </div>
+    </div>        
+</section>
+
 <section id="projetos" class="projetos">
     <div class="center">
         <h3>{{'HOME.projetos' | translate }}</h3>
