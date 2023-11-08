@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 export class DashboardService {
 
   //public API = 'http://localhost:8080';
-  public API = 'https://api-portfoli-2478bc1714ca.herokuapp.com/';
+  //public API = 'https://api-portfoli-2478bc1714ca.herokuapp.com/';
+  public API = 'https://deploy-render-djf6.onrender.com/';
   public CONTROLLER = this.API + '/portfolio';
 
   constructor(private http: HttpClient) { }
