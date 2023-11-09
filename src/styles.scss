@@ -142,6 +142,27 @@ section.banner{
     background-size: cover;
     min-height: 600px;
 }
+section.banner .wrapper{
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    padding-top: 10%;
+}
+.wrapper span{
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: wave 1s infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes wave{
+    0%, 40%, 100%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+}
 section.sobre{
     width: 100%;
     padding: 20px 0;    
@@ -375,7 +396,7 @@ section.sobre{
     border-radius: 5px;
     margin: 10px 15px 0 0;
     padding: 10px;
-    width: 50%;
+    //width: 50%;
 }
 .button{
     display: flex;
@@ -595,7 +616,7 @@ nav.mobile{
 	nav.mobile li a{
 		text-decoration: none;
 		color: black;
-	}  
+	}
     section.sobre{
         text-align: center;
     } 
@@ -630,4 +651,16 @@ nav.mobile{
         margin: auto;
     }
 	
+}
+
+@media screen and (max-width: 365px){    
+    section.banner .wrapper{
+        padding-top: 70%;
+    }
+}
+
+@media screen and (max-width: 260px){    
+    .projetos {
+        display: none;
+    }
 }
