@@ -38,7 +38,7 @@ export class DashboardComponent implements OnInit{
     
     isActive: boolean = false;
 
-    private caminhoCurriculo: string = this.translate.instant('HOME.cv.linkCV');
+    private caminhoCurriculo: string;
     idioma: string;
     
     constructor(private fb: FormBuilder, public translate: TranslateService, 
