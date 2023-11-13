@@ -196,19 +196,38 @@ export class DashboardComponent implements OnInit{
     }
 
     onDownloadClick() {
+      // Obtém o caminho do currículo
       this.obterCaminhoCurriculo();
     
-      // Aguarde até que a URL do currículo seja obtida
-      const interval = setInterval(() => {
+      // Aguarda até que a URL do currículo seja obtida
+      const intervalId = setInterval(() => {
         if (this.caminhoCurriculo) {
-          // Pare o intervalo assim que a URL estiver disponível
-          clearInterval(interval);
+          // Para o intervalo assim que a URL estiver disponível
+          clearInterval(intervalId);
           this.disableCv = false;
-          // Abra uma nova janela para iniciar o download do arquivo
-          window.open(this.caminhoCurriculo, '_blank');
+    
+          // Cria um link temporário para download
+          const downloadLink = this.createDownloadLink();
+    
+          // Adiciona o link ao corpo do documento
+          document.body.appendChild(downloadLink);
+    
+          // Dispara o clique no link para iniciar o download
+          downloadLink.click();
+    
+          // Remove o link do corpo do documento após o download iniciar
+          document.body.removeChild(downloadLink);
         }
       }, 500); // Intervalo de verificação de 500 milissegundos
     }
     
+    // Cria dinamicamente um link para download
+    createDownloadLink() {
+      const link = document.createElement('a');
+      link.href = this.caminhoCurriculo;
+      link.download = `ludger_${this.idioma}.pdf`; // Define o nome do arquivo para download
+      link.target = '_blank';
+      return link;
+    }
     
 }
