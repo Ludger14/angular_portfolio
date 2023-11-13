@@ -26,6 +26,7 @@ export class DashboardComponent implements OnInit{
 
     mostrarMensagemErro: boolean = false;
     disableBox: boolean = false;
+    disableCv: boolean = false;
     showProgressBar: boolean = false;
 
     contentMessageErro: string;
@@ -175,6 +176,7 @@ export class DashboardComponent implements OnInit{
 
     obterCaminhoCurriculo(): void {
       const uniqueParam = new Date().getTime().toString(); // Adicione um parâmetro único
+      this.disableCv = true;
       this.dashboardService.downloadCurriculo(this.idioma, uniqueParam)
         .subscribe(
           (response: any) => {
@@ -201,7 +203,7 @@ export class DashboardComponent implements OnInit{
         if (this.caminhoCurriculo) {
           // Pare o intervalo assim que a URL estiver disponível
           clearInterval(interval);
-    
+          this.disableCv = false;
           // Abra uma nova janela para iniciar o download do arquivo
           window.open(this.caminhoCurriculo, '_blank');
         }

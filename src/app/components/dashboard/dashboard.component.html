@@ -78,7 +78,7 @@
             <span style="--i:7;">.</span>
         </div>
         <div class="cv">
-            <button (click)="onDownloadClick()" class="glow-on-hover" type="button">{{'HOME.cv.descricao' | translate }}</button>
+            <button (click)="onDownloadClick()" [disabled]="disableCv" class="glow-on-hover" type="button">{{'HOME.cv.descricao' | translate }}</button>
         </div>
     </div>
 </section>
