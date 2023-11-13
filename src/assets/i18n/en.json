@@ -142,6 +142,11 @@
       "email": "Email is too long.",
       "assunto": "Subject is too long."
     },
+    "cv": {
+      "nome": "Ludger_english.pdf",
+      "descricao": "Download my resume.",
+      "linkCV": "assets/cv/Ludger_english.pdf"
+    },
     "idioma": {
       "pt-br": "Portuguese",
       "en": "English",

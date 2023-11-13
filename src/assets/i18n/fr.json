@@ -142,6 +142,11 @@
       "email": "L'e-mail est trop long.",
       "assunto": "Le sujet est trop long."
     },
+    "cv": {
+      "nome": "Ludger_english.pdf",
+      "descricao": "Télécharger mon CV.",
+      "linkCV": "assets/cv/Ludger_english.pdf"
+    },
     "idioma": {
       "pt-br": "Portugais",
       "en": "Anglais",

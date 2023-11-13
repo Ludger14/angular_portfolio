@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class DashboardService {
 
-  //public API = 'http://localhost:8080';
+  public API = 'http://localhost:8080';
   //public API = 'https://api-portfoli-2478bc1714ca.herokuapp.com/';
-  public API = 'https://deploy-render-djf6.onrender.com';
+  //public API = 'https://deploy-render-djf6.onrender.com';
   public CONTROLLER = this.API + '/portfolio';
 
   constructor(private http: HttpClient) { }
@@ -20,22 +20,10 @@ export class DashboardService {
       return this.http.post(this.CONTROLLER + '/saveMessage', item, { headers: headers, observe: 'response' });
     }
 
-    getAllTask(){
-      const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
+    downloadCurriculo(item: any): Observable<any> {
+      const headers = new HttpHeaders().set('Accept', 'application/pdf');
 
-      return this.http.get(this.CONTROLLER + '/getAllTask', { headers: headers, observe: 'response' });
-    }
-
-    editTask(name: string, item: any): Observable<any> {
-      const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-
-      return this.http.put(this.CONTROLLER + '/editTask/' + name, item, { headers: headers, observe: 'response' });
-    }
-
-    deleteTask(item: any): Observable<any> {
-      const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-
-      return this.http.delete(this.CONTROLLER + '/deleteTask/' + item, { headers: headers, observe: 'response' });
+      return this.http.get(this.CONTROLLER + '/downloadCurriculo/' + item, { headers, responseType: 'arraybuffer' as 'json' });
     }
 
 }

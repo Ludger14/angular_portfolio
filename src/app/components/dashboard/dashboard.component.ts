@@ -37,6 +37,9 @@ export class DashboardComponent implements OnInit{
     skillsData: any; 
     
     isActive: boolean = false;
+
+    private caminhoCurriculo: string = this.translate.instant('HOME.cv.linkCV');
+    idioma: string;
     
     constructor(private fb: FormBuilder, public translate: TranslateService, 
       private dashboardService: DashboardService,){
@@ -67,6 +70,8 @@ export class DashboardComponent implements OnInit{
         this.formSelect = this.fb.group({
           idioma: ['pt-br'],
         });
+
+        this.idioma = 'pt-br';
 
         this.translate.get('HOME.formation').subscribe(data => {
           this.formationData = data;
@@ -146,7 +151,8 @@ export class DashboardComponent implements OnInit{
     }
 
     onLanguage(){
-      let idioma = this.formSelect.controls['idioma'].value;    
+      let idioma = this.formSelect.controls['idioma'].value;  
+      this.idioma = idioma;  
       this.translate.use(idioma);
       this.updateTranslatedData();
     }
@@ -164,6 +170,36 @@ export class DashboardComponent implements OnInit{
     toggleActive(item) {
       this.skillsData.forEach(skill => skill.isActive = false);
       item.isActive = !item.isActive;
+    }
+
+    obterCaminhoCurriculo(): void {
+      this.dashboardService.downloadCurriculo(this.idioma)
+        .subscribe(
+          (response: any) => {
+            // Crie uma blob com os dados recebidos
+            const blob = new Blob([response], { type: 'application/pdf' });
+    
+            // Crie uma URL para o blob e defina-a como o caminho do currículo
+            this.caminhoCurriculo = URL.createObjectURL(blob);
+          },
+          (error) => {
+            // Lide com erros, por exemplo, definindo um valor padrão para o caminho do currículo
+            console.error('Erro ao obter o caminho do currículo:', error);
+            this.caminhoCurriculo = 'URL_DO_SEU_CURRICULO_PDF';
+          }
+        );
+    }
+    
+
+    onDownloadClick() {
+      this.obterCaminhoCurriculo();
+
+      // Aguarde um pouco antes de tentar abrir a nova janela
+      // Certifique-se de que a URL já foi criada
+      setTimeout(() => {
+        // Abra uma nova janela para iniciar o download do arquivo
+        window.open(this.caminhoCurriculo, '_blank');
+      }, 1000); // Ajuste conforme necessário
     }
     
 }
