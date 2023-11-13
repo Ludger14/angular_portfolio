@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class DashboardService {
 
-  //public API = 'http://localhost:8080';
+  public API = 'http://localhost:8080';
   //public API = 'https://api-portfoli-2478bc1714ca.herokuapp.com/';
-  public API = 'https://deploy-render-djf6.onrender.com';
+  //public API = 'https://deploy-render-djf6.onrender.com';
   public CONTROLLER = this.API + '/portfolio';
 
   constructor(private http: HttpClient) { }
@@ -20,10 +20,11 @@ export class DashboardService {
       return this.http.post(this.CONTROLLER + '/saveMessage', item, { headers: headers, observe: 'response' });
     }
 
-    downloadCurriculo(item: any): Observable<any> {
-      const headers = new HttpHeaders().set('Accept', 'application/pdf');
-
-      return this.http.get(this.CONTROLLER + '/downloadCurriculo/' + item, { headers, responseType: 'arraybuffer' as 'json' });
+    downloadCurriculo(idioma: string, cacheBuster: string): Observable<any> {
+      const headers = new HttpHeaders().set('Cache-Buster', cacheBuster)
+                                        .set('Accept', 'application/pdf');
+    
+      return this.http.get(this.CONTROLLER + '/downloadCurriculo/' + idioma, { headers, responseType: 'arraybuffer' as 'json' });
     }
-
+    
 }

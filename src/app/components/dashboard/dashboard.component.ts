@@ -153,6 +153,7 @@ export class DashboardComponent implements OnInit{
     onLanguage(){
       let idioma = this.formSelect.controls['idioma'].value;  
       this.idioma = idioma;  
+      this.caminhoCurriculo = null;
       this.translate.use(idioma);
       this.updateTranslatedData();
     }
@@ -173,7 +174,8 @@ export class DashboardComponent implements OnInit{
     }
 
     obterCaminhoCurriculo(): void {
-      this.dashboardService.downloadCurriculo(this.idioma)
+      const uniqueParam = new Date().getTime().toString(); // Adicione um parâmetro único
+      this.dashboardService.downloadCurriculo(this.idioma, uniqueParam)
         .subscribe(
           (response: any) => {
             // Crie uma blob com os dados recebidos
@@ -190,7 +192,6 @@ export class DashboardComponent implements OnInit{
           }
         );
     }
-    
 
     onDownloadClick() {
       this.obterCaminhoCurriculo();
