@@ -181,6 +181,7 @@ export class DashboardComponent implements OnInit{
     
             // Crie uma URL para o blob e defina-a como o caminho do currículo
             this.caminhoCurriculo = URL.createObjectURL(blob);
+            console.log(this.caminhoCurriculo);
           },
           (error) => {
             // Lide com erros, por exemplo, definindo um valor padrão para o caminho do currículo
@@ -193,13 +194,18 @@ export class DashboardComponent implements OnInit{
 
     onDownloadClick() {
       this.obterCaminhoCurriculo();
-
-      // Aguarde um pouco antes de tentar abrir a nova janela
-      // Certifique-se de que a URL já foi criada
-      setTimeout(() => {
-        // Abra uma nova janela para iniciar o download do arquivo
-        window.open(this.caminhoCurriculo, '_blank');
-      }, 1000); // Ajuste conforme necessário
+    
+      // Aguarde até que a URL do currículo seja obtida
+      const interval = setInterval(() => {
+        if (this.caminhoCurriculo) {
+          // Pare o intervalo assim que a URL estiver disponível
+          clearInterval(interval);
+    
+          // Abra uma nova janela para iniciar o download do arquivo
+          window.open(this.caminhoCurriculo, '_blank');
+        }
+      }, 500); // Intervalo de verificação de 500 milissegundos
     }
+    
     
 }
