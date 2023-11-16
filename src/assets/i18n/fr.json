@@ -6,7 +6,7 @@
   "projetos": "Projets",
   "contato": "Contact",
   "profissao": "Développeur FullStack",
-  "description": "Je suis diplômé en Gestion des Systèmes Informatiques à CFPH en Haïti et j'ai étudié l'Informatique à l'UFRJ. J'ai plus de 5 ans d'expérience dans le développement de logiciels. Au cours de ma carrière, j'ai travaillé sur des projets stimulants qui m'ont permis d'améliorer mes compétences en langages de programmation tels que Java, JavaScript et Angular. Je suis enthousiaste à l'idée de continuer à contribuer au monde de la technologie et de rechercher des opportunités passionnantes.",
+  "description": "Je suis diplômé en Gestion des Systèmes Informatiques à CFPH en Haïti et j'ai étudié l'Informatique à l'UFRJ. J'ai plus de 5 ans d'expérience dans le développement de logiciels. Au cours de ma carrière, j'ai travaillé sur des projets stimulants qui m'ont permis d'améliorer mes compétences en langages de programmation tels que Java, Javascript et Angular. Je suis enthousiaste à l'idée de continuer à contribuer au monde de la technologie et de rechercher des opportunités passionnantes.",
   "formation": [
       {
         "ano": "2011-2016",
@@ -31,19 +31,19 @@
         "instituicao": "UR COMPANY - BRASIL"
       },
       {
-        "ano": "2016-2017",
+        "ano": "2015-2017",
         "cargo": "Développeur web",
         "instituicao": "ATREVO COMUNICAÇAO E DESIGN"
-      },
-      {
-        "ano": "2011-2013",
-        "cargo": "Web design",
-        "instituicao": "MUNDVS SOFTWARE E SERVIÇOS LTDA"
       },
       {
         "ano": "2014-2015",
         "cargo": "Directeur du projet Haïti Aqui",
         "instituicao": "VIVA RIO"
+      },
+      {
+        "ano": "2011-2013",
+        "cargo": "Web design",
+        "instituicao": "MUNDVS SOFTWARE E SERVIÇOS LTDA"
       }
     ],
     "projeto": [

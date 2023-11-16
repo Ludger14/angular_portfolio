@@ -6,7 +6,7 @@
   "projetos": "Projects",
   "contato": "Contact Me",
   "profissao": "FullStack Developer",
-  "description": "I hold a degree in Systems Analysis from Haiti and pursued Computer Science at UFRJ. With over 5 years of experience in software development, my career has been a journey of embracing exciting challenges that honed my skills in programming languages such as Java, JavaScript, and Angular. I am brimming with enthusiasm to keep contributing to the world of technology and actively seeking thrilling opportunities.",
+  "description": "I hold a degree in Systems Analysis from Haiti and pursued Computer Science at UFRJ. With over 5 years of experience in software development, my career has been a journey of embracing exciting challenges that honed my skills in programming languages such as Java, Javascript, and Angular. I am brimming with enthusiasm to keep contributing to the world of technology and actively seeking thrilling opportunities.",
   "formation": [
       {
         "ano": "2011-2016",
@@ -31,19 +31,19 @@
         "instituicao": "UR COMPANY - BRASIL"
       },
       {
-        "ano": "2016-2017",
+        "ano": "2015-2017",
         "cargo": "Web developer",
         "instituicao": "ATREVO COMUNICAÇAO E DESIGN"
-      },
-      {
-        "ano": "2011-2013",
-        "cargo": "Web design",
-        "instituicao": "MUNDVS SOFTWARE E SERVIÇOS LTDA"
       },
       {
         "ano": "2014-2015",
         "cargo": "Director of the Haiti Aqui project",
         "instituicao": "VIVA RIO"
+      },
+      {
+        "ano": "2011-2013",
+        "cargo": "Web design",
+        "instituicao": "MUNDVS SOFTWARE E SERVIÇOS LTDA"
       }
     ],
     "projeto": [

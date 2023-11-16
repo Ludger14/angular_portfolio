@@ -6,7 +6,7 @@
     "projetos": "Projetos",
     "contato": "Contato",
     "profissao": "Desenvolvedor FullStack",
-    "description": "Sou graduado em Análise de Sistemas no Haiti e cursei Ciência da Computação na UFRJ. Possuo mais de 5 anos de experiência no desenvolvimento de software. Ao longo da minha carreira, fui desafiado por projetos estimulantes que me permitiram aprimorar minhas habilidades em linguagens de programação como Java, JavaScript e Angular. Estou cheio de entusiasmo para continuar contribuindo para o mundo da tecnologia e à procura de oportunidades empolgantes.",
+    "description": "Sou graduado em Análise de Sistemas no Haiti e cursei Ciência da Computação na UFRJ. Possuo mais de 5 anos de experiência no desenvolvimento de software. Ao longo da minha carreira, fui desafiado por projetos estimulantes que me permitiram aprimorar minhas habilidades em linguagens de programação como Java, Javascript e Angular. Estou cheio de entusiasmo para continuar contribuindo para o mundo da tecnologia e à procura de oportunidades empolgantes.",
     "formation": [
       {
         "ano": "2011-2016",
@@ -31,20 +31,20 @@
         "instituicao": "UR COMPANY - BRASIL"
       },
       {
-        "ano": "2016-2017",
+        "ano": "2015-2017",
         "cargo": "Desenvolvedor Web",
         "instituicao": "ATREVO COMUNICAÇAO E DESIGN"
-      },
-      {
-        "ano": "2011-2013",
-        "cargo": "Web design",
-        "instituicao": "MUNDVS SOFTWARE E SERVIÇOS LTDA"
       },
       {
         "ano": "2014-2015",
         "cargo": "Diretor do projeto Haiti Aqui",
         "instituicao": "VIVA RIO"
-      }
+      },
+      {
+        "ano": "2011-2013",
+        "cargo": "Web design",
+        "instituicao": "MUNDVS SOFTWARE E SERVIÇOS LTDA"
+      }      
     ],
     "projeto": [
       {
