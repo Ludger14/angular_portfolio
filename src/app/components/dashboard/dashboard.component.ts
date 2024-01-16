@@ -45,7 +45,7 @@ export class DashboardComponent implements OnInit{
     constructor(private fb: FormBuilder, public translate: TranslateService, 
       private dashboardService: DashboardService,){
         translate.addLangs(['en', 'fr', 'pt-br']);
-        translate.setDefaultLang('pt-br');
+        translate.setDefaultLang('en');
     }
     
     @HostListener('window:scroll', [])
@@ -69,10 +69,10 @@ export class DashboardComponent implements OnInit{
         });
 
         this.formSelect = this.fb.group({
-          idioma: ['pt-br'],
+          idioma: ['en'],
         });
 
-        this.idioma = 'pt-br';
+        this.idioma = 'en';
 
         this.translate.get('HOME.formation').subscribe(data => {
           this.formationData = data;
